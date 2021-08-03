@@ -6,7 +6,7 @@ import re
 
 def main():
     #COPY a sheet from template/previous month sheet in Cashflow.xlsx
-    wb = openpyxl.load_workbook('CashFlow 2021.xlsx')
+    wb = openpyxl.load_workbook('CashFlow_2021.xlsx')
     print(wb.sheetnames)
     lastsheet = wb.sheetnames[len(wb.sheetnames) - 1]
     sheet = wb.copy_worksheet(wb[lastsheet])
@@ -88,7 +88,7 @@ def main():
     os.chdir('..')
     #save .xlsx
 
-    wb.save('CashFlow 2021.xlsx')
+    wb.save('CashFlow_2021.xlsx')
 
 #TODO: USE API TO UPDATE CURRENCY and GOLD Price
 #TODO: Utilitize Function oriented program
